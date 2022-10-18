@@ -18,9 +18,11 @@ Workflow for guided integration:
 Notes to user:
 -NSLS-II option filepath is as follows: tiff_base/samplename/dark_sub
 -APS option has filepath options for 2D images contained in a single directory or multiple
+
 To do prior to integration:
 -Save calibration parameter file (.poni) and edge / beamstop mask (.tif) from pyFAI calibration
 -If not using default integration parameters, choose the integration method, X units, number of radial points, etc.
+
 Required libraries:
 -pyFAI
 -tkfilebrowser
