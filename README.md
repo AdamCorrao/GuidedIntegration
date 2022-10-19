@@ -5,7 +5,7 @@ Includes both graphical user interface and command line interface options
 
 Fully scriptable option available with integration selection based on either a keyword or GUI selection
 
-    Citation for pyFAI: Jérôme Kieffer and Dimitrios Karkoulis 2013 J. Phys.: Conf. Ser. 425 202012 https://doi.org/10.1088/1742-6596/425/20/202012
+    Citation for pyFAI: Journal of applied crystallography, 2015, Vol.48 (2), p.510-519 https://doi.org/10.1107/S1600576715004306
     
     Github for pyFAI: https://github.com/silx-kit/pyFAI
 
