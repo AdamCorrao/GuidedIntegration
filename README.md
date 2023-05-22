@@ -26,4 +26,3 @@ Required libraries:
 Notes to user:
     -NSLS-II filepath assumes 2D images are in subfolders as follows: tiff_base/samplename/dark_sub
     -APS/SSRL filepath has options for 2D images contained in a single directory or multiple
-

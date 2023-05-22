@@ -37,7 +37,7 @@ from time import sleep
 from datetime import datetime
 from tqdm import tqdm
 import pandas as pd
-import tkfilebrowser  # pip install tkfilebrowser if you have not already
+import tkfilebrowser
 from tkinter import *
 import sys
 init(autoreset=True)  # autoresets colors to default after colored print statements
@@ -910,7 +910,7 @@ if guideduse == '2':
                     if len(rad_range) > 1:
                         if type(rad_range[0]) != float and type(rad_range[0]) != int:
                             print(Fore.RED + 'Lower limit of rad_range set to unaccepted operand type: ' +
-                                  str(typ(rad_range[0])) + Fore.RED + '\nSetting rad_range to default min, max\n')
+                                  str(type(rad_range[0])) + Fore.RED + '\nSetting rad_range to default min, max\n')
                             rad_range = d_rad_range
                         if rad_range is not None:
                             if type(rad_range[1]) != float and type(rad_range[1]) != int:
