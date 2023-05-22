@@ -1,37 +1,29 @@
 # GuidedIntegration
-Guided automated integration of 2D images to 1D XRD patterns using pyFAI
-
+Guided automated integration of 2D images to 1D patterns using pyFAI
 Includes both graphical user interface and command line interface options
 
-Fully scriptable option available with integration selection based on either a keyword or GUI selection
+    Citation: Guided Integration Version 0.1 (2023). https://github.com/adamcorrao/GuidedIntegration
+    Citation for latest paper on pyFAI: Kieffer, J., Valls, V., Blanc, N. & Hennig, C. (2020). J. Synchrotron Rad. 27, 558-566.
 
-    Citation for pyFAI: Journal of applied crystallography, 2015, Vol.48 (2), p.510-519 https://doi.org/10.1107/S1600576715004306
-    
-    Github for pyFAI: https://github.com/silx-kit/pyFAI
-
-Workflow for guided integration:
-
--In advance save calibration parameter file (.poni) and edge / beamstop mask (.tif) from pyFAI calibration
-
--Select option 1) guided integration, 2) full auto scripted integration, or 3) load .int file from prior guided integration use
-
-1) GUI option: self-explanatory (follow prompts)
-1) CLI option: self-explanatory (follow prompts)
-2) Prompts GUI selection tool to load .py file (e.g., FullAutoIntegration.py) -> confirm script execution -> integration
-3) Prompts GUI selection tool to load .int file (e.g., GuidedIntegration_18-Oct-2022_12:00:00.int) -> confirm integration prms -> select directories with 2D images to integrate -> integration
-
-
-Notes to user:
-
--NSLS-II option filepath is as follows: tiff_base/samplename/dark_sub
-
--APS option has filepath options for 2D images contained in a single directory or multiple
-
+Functionality:
+    -Guided setup for automated integration of 2D images to 1D patterns using pyFAI
+    -Loading of integration (.int) text file for routine use (not recommended for 1st time users and those unfamiliar with pyFAI)
+    -GUI and command line interface options for selecting directories to parse for images to integrate
+    -Automates creation of separate directories for 1D patterns in a specified directory for each image directory selected
+    -Saves an editable integration (.int) text file for easy parameter editing and routine use
+    -Generates a record (.rec) file containing a list of directories parsed, a list of images integrated, and info from .int file**
 
 To do prior to integration:
+    -Save an instrument geometry file (.poni) from calibration (e.g., pyFAI-calib2)
+    -Create a mask if needed (e.g., for detector edges, beamstop, dead pixels) and save as one of the following filetypes: *.tif | *.edf | *.npy | *.msk
 
--Save calibration parameter file (.poni) and edge / beamstop mask (.tif) from pyFAI calibration
+Required libraries:
+    -Scientific python libraries (e.g., numpy, pandas)
+    -pyFAI (& all dependencies)
+    -tkfilebrowser
+    -tqdm
 
--If not using default integration parameters, choose the integration method, X units, number of radial points, etc.
+Notes to user:
+    -NSLS-II filepath assumes 2D images are in subfolders as follows: tiff_base/samplename/dark_sub
+    -APS/SSRL filepath has options for 2D images contained in a single directory or multiple
 
-Required libraries: pyFAI, tkfilebrowser, tkinter, scientific python libraries (numpy, pandas), tqdm

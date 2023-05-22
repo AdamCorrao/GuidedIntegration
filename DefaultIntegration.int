@@ -1,0 +1,44 @@
+#Guided Integration .int parameter file
+#Date: 01Jan2023
+#Time: 12-00-00
+#Version: 0.1
+#Github: github.com/adamcorrao/GuidedIntegration
+#Citation: Guided Integration Version 0.1 (2023). https://github.com/adamcorrao/GuidedIntegration
+#Citation for latest paper on pyFAI: Kieffer, J., Valls, V., Blanc, N. & Hennig, C. (2020). J. Synchrotron Rad. 27, 558-566.
+
+#Description of parameters, options available, acceptable operand / filetypes (Guided Integration formats this correctly):
+	#Data from NSLS-II, APS, or SSRL: where was data collected? Expected image extensions are .tiff for NSLS-II and .tif for APS / SSRL. NSLS-II images expected in sub directory 'dark_sub'
+	#Main integrated pattern directory: directory where sub directories are created in which integrated patterns are saved
+	#Poni file: instrument geometry (e.g., sample-to-detector distance, detector tilts) file - filetype must be .poni
+	#Mask file: static mask (e.g., beamstop, detector edges) - must be one of the following filetypes: *.tif | *.edf | *.npy | *.msk
+
+#Integration parameters (see pyFAI docs for more details):
+	#Pixel splitting options: no (no splitting), full (full splitting), bbox (bounding box), pseudo (scaled down bbox)
+	#X unit options: 2th_deg, 2th_rad, q_nm^-1, q_A^-1, d*2_A^-2, r_mm
+	#Radial (x-unit) points: the number of bins in the x-axis - must be a number
+	#Radial (x-unit) range: radial range to integrate image over (x-unit specific) - must be a pair of comma separated numbers or None for full range
+	#Azimuthal (deg.) range: azimuthal (deg.) range to integrate image over - must be a pair of comma separated numbers or None for full range
+	#Automask pixel value: pixels with intensity less than this value are automatically masked - must be a number
+	#Intensity error model options: none, poisson for variance = I
+
+######################################################################################################################################################
+Integration parameters and setup.
+Below here user can edit parameters after the colon. In-line comments are allowed.
+######################################################################################################################################################
+
+Data from NSLS-II, APS, or SSRL: NSLS-II
+Main integrated pattern directory: C:\This\Is\My\Path\1D
+Poni file: C:\This\Is\My\Path\Si_allrings.poni
+Mask file: C:\This\Is\My\Path\Si_mask.edf
+
+Pixel splitting method: full
+X unit: 2th_deg
+Radial (x-unit) points: 6000
+Radial (x-unit) range: None
+Azimuthal (deg.) range: None
+Automask pixel value: -1e-10
+Intensity error model: None
+
+######################################################################################################################################################
+User notes / metadata allowed below here:
+######################################################################################################################################################
