@@ -1,6 +1,6 @@
 # GuidedIntegration
-Guided automated integration of 2D images to 1D patterns using pyFAI
-Includes both graphical user interface and command line interface options
+Guided automated integration of 2D images to 1D patterns using pyFAI, including both graphical user interface and command line interface options.
+Guided Integration is a self-contained script with the functionality described below.
 
     Citation: Guided Integration Version 0.1 (2023). https://github.com/adamcorrao/GuidedIntegration
     Citation for latest paper on pyFAI: Kieffer, J., Valls, V., Blanc, N. & Hennig, C. (2020). J. Synchrotron Rad. 27, 558-566.
