@@ -28,7 +28,7 @@ Below here user can edit parameters after the colon. In-line comments are allowe
 
 Data from NSLS-II, APS, or SSRL: NSLS-II
 Main integrated pattern directory: C:\This\Is\My\Path\1D
-Poni file: C:\This\Is\My\Path\Si_allrings.poni
+Poni file: C:\This\Is\My\Path\ExperimentGeometry.poni
 Mask file: C:\This\Is\My\Path\Si_mask.edf
 
 Pixel splitting method: full
